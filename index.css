@@ -1,0 +1,73 @@
+.messenger{
+    margin-top: 10px;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 5px;
+    height: 97vh ;
+    width: 97vw;
+
+}
+
+.videostream{
+    border:2px solid #4A148C;
+    background: #4A148C;
+    height: 94vh;
+    width: 65vw;
+}
+#video{
+
+    margin-left: auto;
+    margin-right: auto;
+}
+.chat{
+
+    border:2px solid #4A148C;
+    height: 94vh;
+    width: 30vw;
+    padding: 1px;
+}
+.tm{
+
+    position: relative;
+    top: 44.3vh;
+}
+
+#messages{
+    overflow: auto;
+    overflow-scrolling: auto;
+    position: absolute;
+    bottom: 60px;
+    height: 88.2vh;
+    width: 29.6vw;
+    border: 1px dotted #4A148C;
+}
+.connection{
+    text-align: center;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 8px 0 #4A148C;
+    padding: 3px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 100px;
+    height: 400px;
+    width: 700px;
+    background: #4A148C;
+    border:1px solid #4A148C;
+    border-radius: 7px;
+}
+.s{
+    position:absolute; right:30px;
+    color:white;
+    background-color: #4A148C; margin: 3px 0px; border-radius: 14px; padding:8px;
+    font-size:13px;
+    min-width:60px;
+    text-align:center;
+}
+.r{
+    position:absolute; left:30px;
+    color:white;
+    background-color: #4A148C; margin: 3px; border-radius: 14px; padding:8px;
+    font-size:13px;
+    min-width:60px;
+    text-align:center;
+}

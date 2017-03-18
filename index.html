@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>ChatMe</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+
+<div class="connection">
+    <div style="color:white ; top: 5px;" class="X"><a class="close" href="" style="color:white;">Close</a></div>
+    <h1 style="color:white; text-align: center;">ChatMe</h1><br>
+    <textarea id="yourId" style="width:500px;"></textarea>
+    <h3 style="color:white; text-align: center;">Your Friends ID</h3><br>
+    <textarea id="otherId" style="width:500px; height:100px;"></textarea><br>
+    <button id="connect" class="btn custom" style="margin-top:10px;">CONNECT</button><br>
+</div>
+
+<div class="messenger" style="display:none;">
+    <table>
+        <tr>
+            <td class="videostream" style="text-align:center;">
+                <video id="video" src=""></video>
+            </td>
+
+            <td class="chat">
+                <div id="messages"></div>
+                <input type="text" class="form-control customa tm" id="yourMessage" name="textmessage" >
+            </td>
+        </tr>
+
+    </table>
+</div>
+<script type="text/javascript">
+    var interval=setInterval(function(){
+        if(($('#messages').scrollTop() + $('#messages').innerHeight())>=0.80*$('#messages')[0].scrollHeight){
+            $('#messages').scrollTop($('#messages')[0].scrollHeight);
+        }
+    }, 250);
+    var x =location.hash.toString();
+    $(".close").attr('href',x);
+    $('.X').click(function () {
+        $(".connection").hide(200);
+    });
+    var x =location.hash.toString();
+
+    if(x==='#1') {
+
+
+        $("#connect").click(function () {
+            if(x==='#1') {
+                if ($("#otherId").val() != '') {
+                    $(".connection").hide(200);
+                    $(".messenger").fadeIn(500);
+                }
+                else {
+                    alert("You need to enter valid peer ID");
+                }
+            }
+        });
+    }else if(x==='#2') {
+
+    var a= setInterval(function () {
+        if($("#video").attr('src')==''){}else{
+
+            clearInterval(a);
+
+            $(".messenger").fadeIn(500);
+        }
+    },100);
+    }
+</script>
+<script src="bundle.js"></script>
+</body>
+</html>
